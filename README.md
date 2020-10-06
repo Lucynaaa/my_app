@@ -10,3 +10,5 @@
   * views.py - znajduje się kod źródłowy aplikacji napisany w pythonie
 * test:
   * test_views.py - znajdują się testy dla kodu
+  
+  test
