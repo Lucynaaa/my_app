@@ -8,6 +8,8 @@ install:
 script:
   - PYTHONPATH=. py.test --verbose -s --cov=.
 deploy:
+  on:
+    branches: main
   provider: heroku
   app: lucyna
   api_key: ${HEROKU_API_KEY} 
