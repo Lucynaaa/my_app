@@ -9,5 +9,5 @@ script:
   - PYTHONPATH=. py.test --verbose -s --cov=.
 deploy:
   provider: heroku
-  app: quiet-atoll-68807
+  app: lucyna
   api_key: ${HEROKU_API_KEY} 
