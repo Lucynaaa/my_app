@@ -2,7 +2,7 @@ from hello_world import app
 from flask import request
 
 moje_imie = "Lucyna"
-msg = "Hello: "
+msg = "Hello again "
 
 
 @app.route('/')
