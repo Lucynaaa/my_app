@@ -35,7 +35,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - uses: actions/checkout@v2
-      - uses: LucynaNak/heroku-deploy@v3.12.12 # This is the action
+      - uses: Lucyna Nak/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "lucyna" #Must be unique in Heroku
