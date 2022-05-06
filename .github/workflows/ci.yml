@@ -34,17 +34,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-  name: Deploy
 
-    on:
-      push:
-    branches:
-      - main # Changing the branch here would also work
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
+      - name: Heroku Deploy
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
