@@ -35,10 +35,9 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      - uses: actions/checkout@v2
+      - uses: NikitaGlukhi/heroku-pipelines-promoting@v1.1
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "lucyna" #Must be unique in Heroku
+          heroku_app_name: "lucyna"
           heroku_email: "lucyna.nakiewicz@gmail.com"
-          justlogin: true
-      - run: heroku auth:whoami
