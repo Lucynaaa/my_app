@@ -35,9 +35,21 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main # Changing the branch here would also work
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v2
-      - uses: NikitaGlukhi/heroku-pipelines-promoting@v1.1
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "lucyna"
+          heroku_app_name: "lucyna" #Must be unique in Heroku
           heroku_email: "lucyna.nakiewicz@gmail.com"
+          procfile: "web: gunicorn hello_world:app"
