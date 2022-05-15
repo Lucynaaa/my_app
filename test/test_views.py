@@ -8,4 +8,4 @@ class FlaskrTestCase(unittest.TestCase):
 
     def test_msg_with_output(self):
         response = self.app.get('/')
-        self.assertEqual(b"Hello again ", response.data)
+        self.assertEqual(b"Hello again Lucyna", response.data)
