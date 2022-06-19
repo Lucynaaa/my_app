@@ -11,5 +11,5 @@
 * test:
   * test_views.py - znajdują się testy dla kodu
 
-# przyklad uruchomienia mojej apki w srodowisku deweloperskim
+## przykład uruchomienia mojej apki w środowisku deweloperskim
 * docker run -p 5000:5000 -e "FLASK_ENV=development" -v ./hello_world:/usr/apka my-first-docker
