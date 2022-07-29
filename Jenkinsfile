@@ -2,7 +2,9 @@ pipeline {
     agent none
     stages {
 	stage("set up") {
+	    steps {
 		    sh 'sudo apt-get install podman'
+	    }
 	}
         stage("build") {
 	    agent { 
