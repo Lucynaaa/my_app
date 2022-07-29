@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("build") {
 	    agent { 
-		    docker { image 'lucynaaa/my-first-docker:1' }
+		    docker { image 'python:2.7' }
 	    }
             steps {
 		    echo 'building the application...'
