@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
     stages {
         stage("build") {
 	    agent { docker 'lucynaaa/my-first-docker:1' }
