@@ -1,6 +1,9 @@
 pipeline {
     agent none
     stages {
+	stage("set up") {
+		    sh 'sudo apt-get install podman'
+	}
         stage("build") {
 	    agent { 
 		    docker { image 'python:2.7' }
