@@ -2,7 +2,9 @@ pipeline {
     agent none
     stages {
         stage("build") {
-	    agent { docker 'lucynaaa/my-first-docker:1' }
+	    agent { 
+		    docker { image 'lucynaaa/my-first-docker:1' }
+	    }
             steps {
 		    echo 'building the application...'
 		    sh 'pip install -r requirements.txt'
