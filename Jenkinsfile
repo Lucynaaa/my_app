@@ -3,7 +3,7 @@ pipeline {
     stages {
 	stage("set up") {
 	    steps {
-		    sh 'sudo apt-get install podman'
+		    sh 'apt-get install podman'
 	    }
 	}
         stage("build") {
